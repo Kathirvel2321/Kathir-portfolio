@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.profile-photo {
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
+}
+
+.profile-photo{
+    @apply  md:w-[800px] md:h-[800px] object-contain md:-mt-40 h-[50%] 
+
+}
+
+.frame{
+    @apply  absolute lg:h-full lg:w-[45%] md:w-auto lg:left-[20%] md:left-64 border-4 border-gray-700 flex w-[40%] sm:border-none rounded-full overflow-hidden sm:rounded-none lg:overflow-visible top-28 md:top-40 
+
+}
+
+
+
+.boxes{
+    @apply border-2 border-white/5 backdrop-blur-sm bg-white/5 md:rounded-xl rounded-lg flex  gap-2 pt-5 items-center justify-center md:h-40 md:w-40 h-16 w-16
+    flex-col md:text-3xl text-[10px]
+}
+
+.skill-icons{
+    @apply w-12 h-14 
+}
+
+
+.skillname{
+    @apply text-cream
+}
+
+.boxes:hover{
+    @apply bg-neonblue/5 backdrop-blur-sm
+    
+}
+.boxes:hover{
+    box-shadow: 0 0 8px rgba(75, 225, 242,0.5);
+}
+
+.boxes:hover .css-icon{
+    animation: colorchange 3s infinite ease;
+}
+
+.boxes:hover .html-icon {
+    @apply animate-bounce
+}
+
+
+@keyframes colorchange {
+    0%   { fill: darkturquoise; }
+    25%  { fill: blueviolet; }
+    50%  { fill: green; }
+    75%  { fill: yellow; }
+    100% { fill: red; }
+}
+
+.boxes:hover .tailwind-icon{
+    animation: wave 3s infinite linear;
+}
+
+@keyframes wave {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(10deg); }
+    50%  { transform: rotate(-10deg); }
+    75%  { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.boxes:hover .react-icon{
+    animation: spin 5s infinite linear; 
+
+}
+@keyframes spin {
+    to {transform: rotate(360deg);}
+}
+
+.boxes:hover .node-icon{
+    animation: zoom-in-out 3s infinite linear;
+    
+}
+@keyframes zoom-in-out {
+  0%   { transform: scale(1); }   
+  50%  { transform: scale(1.15);} 
+  100% { transform: scale(1);   }
+}
+.boxes:hover .js-icon{
+    animation: shake 0.4s ease-in;
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }  
+}
+
+.boxes:hover .mongo-icon{
+   animation: leaf 1.2s ease-in-out;
+}
+@keyframes leaf {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(8deg); }
+  50%  { transform: rotate(-8deg); }
+  75%  { transform: rotate(6deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.boxes:hover .mysql-icon{
+   animation: water 1.5s infinite ease-in-out;
+
+}
+@keyframes water {
+    0%     { transform: scale(1);     opacity: 1; }
+    50%    { transform: scale(1.15);  opacity: 0.8; }
+    100%   { transform: scale(1);     opacity: 1; }    
+}
+
+.tool-icon{
+    width: 60px;
+    height: 60px;
+}
+@media screen and (max-width:480px) {
+    .tool-icon{
+        width: 20px;
+        height: 20px;
+    }
+    
+}
+
+.toolbox{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+
+}
+.tool-icon{
+    @apply hover:scale-105 duration-700
+}
+@media screen and (max-width:480px) {
+    .vercel-icon{
+        width: 10px;
+        height:10px;
+    }
+    
+}
