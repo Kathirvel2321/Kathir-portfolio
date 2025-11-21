@@ -141,10 +141,32 @@
 .tool-icon{
     @apply hover:scale-105 duration-700
 }
+
+.featureslist{
+   
+    @apply lg:w-40 lg:h-40 text-[5px] lg:text-lg bg-neonblue/10 border-4 border-neonblue/15 lg:rounded-lg flex items-center lg:p-5 w-10 h-10 flex-wrap backdrop-blur-sm text-center transition-all duration-500 hover:scale-105
+    
+}
+.featureslist:hover{
+    box-shadow: 0 0 5px rgba(75, 225, 242,1);
+}
+
 @media screen and (max-width:480px) {
     .vercel-icon{
         width: 10px;
         height:10px;
+    }
+    
+}
+@media screen and (max-width:480px) {
+    .swiper{
+        
+        height: 250px;
+        
+    }
+    .project-images{
+        height: 100px;
+    
     }
     
 }
