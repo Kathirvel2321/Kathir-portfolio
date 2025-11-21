@@ -1,23 +1,41 @@
-import React from "react";
-import Hero from "./pages/Hero";
-import Skill from "./pages/Skill";
-import Hero1 from "./pages/Hero1";
+import React, { lazy, Suspense } from "react";
+import { Route,Routes } from "react-router-dom";
+import ProjectDetails from "./pages/ProjectDetails";
+import TotalProject from "./pages/TotalProject";
+const Hero1 = lazy(()=> import("./pages/Hero1"));
+const Skill = lazy(()=> import("./pages/Skill"));
+const Projects = lazy(()=> import("./pages/Project"));
+const About = lazy(()=> import("./pages/About"));
+const Contact = lazy(()=> import("./pages/Contact"))
 const App = () => {
   return (
-    <div>
-      <div className="hero overflow-hidden"><Hero1 /></div>
-      
-      <Skill />
 
+      <div className="overflow-x-hidden">
+        <Suspense fallback={<div className="text-white p-10">Loading...</div>}>
+          <Routes>
+            {/* Home Page */}
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero1 />
+                  <Skill />
+                  <Projects />
+                  <About />
+                  <Contact />
+                </>
+              }
+            />
 
-      <div className="Projects"></div>
+            {/* Project Details Page */}
+            <Route path="/AllProjects" element ={<TotalProject/>} />
+            <Route path="/projects/:id" element={<ProjectDetails />} />
+          </Routes>
+        </Suspense>
+      </div>
 
-      <div className="Quote"></div>
-
-      <div className="About"></div>
-
-      <footer></footer>
-    </div>
+    
+    
   );
 };
 
