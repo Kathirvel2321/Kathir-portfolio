@@ -45,9 +45,9 @@ const About = () => {
             <br />
             <br />I transform ideas into interactive interfaces where design
             meets clean, scalable code. I focus on delivering smooth user
-            experiences using 
+            experiences using {' '}
             <span className="text-cream font-semibold">
-              React, Tailwind CSS, JavaScript, Node.js 
+              React, Tailwind CSS, JavaScript, Node.js {' '}
             </span>
              and more.
           </p>
