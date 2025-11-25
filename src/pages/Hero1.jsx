@@ -136,12 +136,11 @@ const Hero1 = () => {
               </FadeRight>
               <FadeRight delay={0.3}>
                 <p className="md:text-sm text-xs pt-5 md:pt-12 pb-5 lg:leading-7 tracking-widest text-cream/70">
-                  I’m a passionate
+                  I’m a passionate 
                   <span className=" font-semibold">
-                   
                     Frontend Developer
                   </span>
-                  and creative designer who crafts responsive, user-friendly web
+                   and creative designer who crafts responsive, user-friendly web
                   experiences.
                 </p>
               </FadeRight>
